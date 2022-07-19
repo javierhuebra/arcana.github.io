@@ -1,0 +1,673 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+    
+    
+}
+body{
+    background-image: url("./images/peakpx.jpg");
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Bangers', cursive;
+    
+    
+    
+    
+    
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position:sticky;
+    top: 0;
+    background-color: #310336;
+    height: 80px;
+    justify-content: space-between;
+    color: white;
+    z-index: 100;
+   
+}
+.header p{
+    color: #310336
+}
+.logo-derecha{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 0px 30px;
+}
+.logo-derecha p{
+    color: rgb(206, 97, 97);
+}
+
+.bola-gif{
+    width: 80px;
+    
+    mix-blend-mode: multiply;
+    
+}
+.textos-header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0px 30px;
+    height: 100%;
+    background-color: #6C0775;
+}
+
+.imagenes-cartas{
+    width: 250px;
+    height: 380px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.534);
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    
+    
+}
+.flex-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: #ffffff;
+    position: relative;
+    
+}
+
+
+
+
+.main,.contenedor-cartas{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0px 7vw;
+}
+.contenedor-cartas{
+margin: 0;
+}
+.footer{
+    background-color: #310336;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:#6C0775;
+    height: 100px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.397);
+    margin-top: 0px;
+    
+    
+}
+
+
+.opacador-class{
+    width: 251px;
+    height: 381px;
+    background-color: rgba(0, 0, 0, 0.541);
+    position: absolute;
+    border-radius: 15px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 1s;
+}
+.dorso-carta{
+    width: 251px;
+    height: 381px;
+    
+    position: absolute;
+    border-radius: 15px;
+    top: 0;
+    display: flex;
+   
+    transition: 0.5s;
+}
+.opacador-class h3{
+    font-size: 75px;
+    transition: 0.5s;
+    margin-bottom: 10px;
+}
+.opacador-class p{
+    padding: 0 25px;
+    transition: 0.5s;
+}
+
+
+
+.opacador-class p{
+    color: #E20FF5;
+}
+.flex-item:hover >.opacador-class {
+   opacity: 0.4;
+   cursor: pointer;
+}
+.flex-item:hover >.opacador-class>h3{
+    opacity: 0;
+}
+.flex-item:hover >.opacador-class>p{
+    opacity: 0;
+}
+.flex-item:hover >.dorso-carta{
+    opacity: 0;
+}
+
+
+.circulo{
+    width: 120px;
+    height: 100px;
+    background-color: #6C0775;
+    position:absolute;
+    top: 40%;
+    border-radius: 50%;
+    right: -22%;
+    
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 5;
+    transition: 1s;
+    
+}
+.luna{
+    z-index: 6;
+    font-size: 45px;
+    color: #2d0031;
+    padding-right: 15px;
+
+    
+}
+.menu-lateral{
+    transition: 1s;
+    height: 60vh;
+    width: 300px;
+    background-color: #6C0775;
+    position: fixed;
+    z-index: 10;
+    top: 200px;
+    border-radius: 20px;
+    left: -290px;
+    box-shadow: 0px 0px 10px black;
+}
+
+.menu-lateral:hover{
+    left: -2%;
+}
+
+.nav_ul{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    font-size: 30px;
+    list-style: none;
+}
+
+.nav_ul li{
+    border: 3px solid #CA0DDB;
+    padding: 5px 25px;
+    font-size: 35px;
+    border-radius: 10px;
+}
+
+.nav_ul>li>i{
+    margin-right: 8px;
+}
+
+.contenedor-popup{
+    display: flex;
+    flex-direction: column;
+    
+    width: 300px;
+    height: 150px;
+    position: fixed;
+    right: -300px;
+    bottom: 25px;
+    z-index: 10;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgb(5, 5, 5);
+    transition: 1s;
+    
+}
+.contenedor-popup:hover{
+    width: 310px;
+  height: 150px;
+  
+}
+.color-arriba{
+    background-color: black;
+    height: 50%;
+    border-radius: 20px 20px 0 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    font-size: 25px;
+}
+.color-abajo{
+    background-color:#6C0775;
+    height: 50%;
+    border-radius: 0 0 20px 20px; 
+
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding:10px 10px 0 0;
+    font-size: 25px;
+}
+
+.god{
+    position: absolute;
+    left: 1%;
+    width: 150px;
+    height: 150px;
+    filter: drop-shadow(0px 0px 5px rgb(248, 3, 228));
+    z-index: 50;
+}
+.circulo2{
+    width: 100px;
+    height: 100px;
+    background-color: #6C0775;
+    position:absolute;
+    top: 20%;
+    border-radius: 50%;
+    left: -42%;
+    
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 5;
+    transition: 1s;
+
+    
+    
+}
+.prueba-transparente{
+    width: 300px;
+    height: 200px;
+    background-color: transparent;
+    position:absolute;
+    top: 0%;
+    
+    left: -42%;
+    
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 0;
+    transition: 1s;
+
+    
+    
+}
+.telefono,.flechita{
+    z-index: 1;
+    font-size: 45px;
+    color: #2d0031;
+    padding-right: 25px;
+
+}
+span{
+    color: #E20FF5;
+    text-shadow:0px 0px 10px #E20FF5;
+}
+.contenedor-popup:hover{
+    right: 25px;
+    opacity: 100;
+}
+.contenedor-popup:hover .circulo2{
+    opacity: 0;
+}
+
+.cuadro{
+    margin: 1vh 0;
+    height: 79vh;
+    width: 100vw;
+    
+    
+    font-family: 'Shadows Into Light', cursive;
+    
+    
+}
+
+.container-principal{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    
+}
+
+
+.recuadro-uno{
+    height: 20%;
+    display: flex;
+   
+}
+.uno-uno{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ),
+    url(https://media.istockphoto.com/photos/tarot-cards-and-pendulum-on-altar-picture-id1264332082?k=20&m=1264332082&s=170667a&w=0&h=DRJpLvpJjV13SYd0lR18AEaoIXXKWuGswBQg_3Jwd6w=);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    width: 70%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-left: 50px;
+    font-size: 45px;
+    text-shadow: 0px 0px 15px black;
+    transition: 0.5s;
+}
+
+.uno-uno:hover{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0)
+    ),
+    url(https://media.istockphoto.com/photos/tarot-cards-and-pendulum-on-altar-picture-id1264332082?k=20&m=1264332082&s=170667a&w=0&h=DRJpLvpJjV13SYd0lR18AEaoIXXKWuGswBQg_3Jwd6w=);
+    width: 75%;
+    text-shadow: 0px 0px 15px #6C0775;
+    font-size: 50px;
+    cursor: pointer;
+
+    box-shadow: inset 0 0 15px 10px #e20ff58f;
+}
+
+
+
+
+.uno-dos{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url(https://assets.iprofesional.com/cdn-cgi/image/w=880,f=webp/https://assets.iprofesional.com/assets/jpg/2021/01/510913.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    width: 30%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 35px;
+    text-shadow: 0px 0px 15px black;
+}
+
+.recuadro-dos{
+    height: 60%;
+    display: flex;
+    
+}
+.dos-uno{
+    width: 50%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+}
+.dos-dos{
+    width: 50%;
+    height: 100%;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url(https://thumbs.dreamstime.com/b/berl%C3%ADn-alemania-febrero-adivinaci%C3%B3n-cartas-de-tarot-p%C3%A9ndulos-derribo-cristal-una-vela-t%C3%A9-la-fortuna-con-tarjetas-baja-y-176904624.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 55px;
+    text-shadow: 0px 0px 15px black;
+    
+}
+
+.dos-uno-uno{
+    height: 50%;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url(https://images3.alphacoders.com/729/729108.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-left: 50px;
+    font-size: 35px;
+    text-shadow: 0px 0px 15px black;
+}
+
+.dos-uno-dos{
+    height: 50%;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url(https://media.istockphoto.com/photos/zodiac-signs-inside-of-horoscope-circle-astrology-in-the-sky-with-picture-id1315195611?b=1&k=20&m=1315195611&s=170667a&w=0&h=4gnJXXsf-dGRR86btcP2LMFTUVD65hpoYIpRXVicgBg=);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-left: 50px;
+    font-size: 35px;
+    text-shadow: 0px 0px 15px black;
+}
+
+.recuadro-tres{
+    width: 100%;
+    height: 20%;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url(https://thumbs.dreamstime.com/b/pancarta-m%C3%A1gica-para-el-dise%C3%B1o-de-astrolog%C3%ADa-tarot-boho-arte-del-universo-luna-creciente-y-sol-sobre-fondo-azul-esot%C3%A9rico-198798964.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 55px;
+    text-shadow: 0px 0px 15px black;
+    
+}
+.flecha-atras{
+    width: 100px;
+    height: 100px;
+    background-color: #6C0775;
+    position:fixed;
+    top: 90px;
+    border-radius: 50%;
+    left: 10px;
+    
+
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 105;
+    transition: 0.2s;
+
+    
+    
+}
+.flecha-atras:hover{
+    background-color: #2d0031;
+    cursor: pointer;
+    
+}
+.flechita{
+    transition: 0.2s;
+}
+.flecha-atras:hover .flechita{
+    color: white;
+    cursor: pointer;
+}
+.pantalla-negra{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.562);
+    position: absolute;
+    z-index: 500;
+    display: none;
+    flex-direction: row;
+    
+}
+.parte-visible,.contenido-parte-visible{
+    height: 60vh;
+    width: 60vw;
+    background-color:#2d0031b7;
+    position: sticky;
+    top: 20%;
+    left: 20%;
+    border:8px solid #2d0031;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+.contenido-parte-visible{
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+.img-carta-grande{
+    width: 20vw;
+    height: 28vw;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.534);
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    margin-right: 5%;
+}
+
+.carta-descripcion{
+    width: 50%;
+    height: 90%;
+    border-radius: 15px;
+
+    
+
+    background-color: #4b0052d7;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+   
+}
+.descripcion-parrafo{
+    color:black;
+    font-family: 'Shadows Into Light', cursive;
+    width: 90%;
+    height: 60%;
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+#titulo_desc,#titulo_desc_2{
+    font-size: 50px;
+    color:#e4e3e3;
+    margin-bottom: 10px;
+}
+
+#titulo_desc{
+    border-bottom:5px solid #310336;
+    font-size: 35px;
+    color: #310336;
+}
+#parrafo_carta{
+    padding: 10px;
+    font-weight: bold;
+}
+.numerito{
+    text-shadow: none;
+}
+.circulo3{
+    position: fixed;
+    position: absolute;
+    top: -8%;
+    border-radius: 50%;
+    right: -5%;
+    
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 5;
+    transition: 1s;
+}
+.equis{
+    color: #6C0775;
+    font-size: 55px;
+}
+.equis:hover{
+    color: #2d0031;
+    cursor: pointer;
+}
+.izquierdita,.derechita{
+    position: fixed;
+    position: absolute;
+    top: 45%;
+    font-size: 50px;
+    z-index: 5;
+    color: #6C0775;
+}
+.izquierdita{
+    left: -60px;
+}
+.derechita{
+    right: -60px;
+}
+.izquierdita:hover{
+    color: #2d0031;
+    cursor: pointer;
+}
+.derechita:hover{
+    color: #2d0031;
+    cursor: pointer;
+}
