@@ -43,6 +43,7 @@ for(let i=0;i<80;i++){
         document.querySelector(".img-carta-grande").src=`images/cartas/${mazo[i].imagen}.jpg`;
         document.getElementById("titulo_desc").innerHTML=`${mazo[i].nombre}`;
         document.getElementById("parrafo_carta").innerHTML=`${mazo[i].aptitud}`;
+        
         valorSeleccionado=i;
     });
    
@@ -83,6 +84,7 @@ document.querySelector(".derechita").addEventListener("click",()=>{
     document.querySelector(".img-carta-grande").src=`images/cartas/${mazo[valorSeleccionado].imagen}.jpg`;
     document.getElementById("titulo_desc").innerHTML=`${mazo[valorSeleccionado].nombre}`;
     document.getElementById("parrafo_carta").innerHTML=`${mazo[valorSeleccionado].aptitud}`;
+     
 });
 document.querySelector(".izquierdita").addEventListener("click",()=>{
     valorSeleccionado--;
@@ -93,3 +95,16 @@ document.querySelector(".izquierdita").addEventListener("click",()=>{
     document.getElementById("titulo_desc").innerHTML=`${mazo[valorSeleccionado].nombre}`;
     document.getElementById("parrafo_carta").innerHTML=`${mazo[valorSeleccionado].aptitud}`;
 })
+document.querySelector('.dos-dos').style.backgroundImage = `linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+), url(https://assets.iprofesional.com/cdn-cgi/image/w=880,f=webp/https://assets.iprofesional.com/assets/jpg/2021/01/510913.jpg)`;
+
+window.onload=()=>{
+    document.querySelector(".container-principal").style.opacity="1";
+    document.querySelector(".main").style.opacity="1";
+    document.querySelector(".div-carga").style.display="none";
+    
+};
+

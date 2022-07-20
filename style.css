@@ -90,6 +90,11 @@ body{
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 0px 7vw;
+   
+}
+.main{
+    opacity: 0;
+    transition: 1s;
 }
 .contenedor-cartas{
 margin: 0;
@@ -344,9 +349,10 @@ span{
     margin: 1vh 0;
     height: 79vh;
     width: 100vw;
-    
+    color:#fad4fd;
     
     font-family: 'Shadows Into Light', cursive;
+    
     
     
 }
@@ -357,6 +363,8 @@ span{
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    opacity: 0;
+    transition: 0.5s;
     
 }
 
@@ -381,7 +389,7 @@ span{
 
     display: flex;
     align-items: center;
-    color: white;
+    
     padding-left: 50px;
     font-size: 45px;
     text-shadow: 0px 0px 15px black;
@@ -411,19 +419,36 @@ span{
         0deg,
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
-    ), url(https://assets.iprofesional.com/cdn-cgi/image/w=880,f=webp/https://assets.iprofesional.com/assets/jpg/2021/01/510913.jpg);
+    ), url(https://media.istockphoto.com/photos/hand-holding-tarot-card-with-candlelight-on-the-darkness-background-picture-id1202954539?b=1&k=20&m=1202954539&s=170667a&w=0&h=Y2mCnRonkkwOsHpiBfaDF8vQLLFqFW3ppy1zLmOUaHM=);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position:center;
+    background-position:left;
     width: 30%;
     height: 100%;
-
+    color: #ffd0be;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    
     font-size: 35px;
     text-shadow: 0px 0px 15px black;
+    transition: 0.5s;
+}
+
+.uno-dos:hover{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0)
+    ),
+    url(https://media.istockphoto.com/photos/hand-holding-tarot-card-with-candlelight-on-the-darkness-background-picture-id1202954539?b=1&k=20&m=1202954539&s=170667a&w=0&h=Y2mCnRonkkwOsHpiBfaDF8vQLLFqFW3ppy1zLmOUaHM=);
+    width: 35%;
+    
+    text-shadow: 0px 0px 15px #fdbfdc8f;
+    font-size: 40px;
+    cursor: pointer;
+
+    box-shadow: inset 0 0 15px 10px #fdbfdc8f;
 }
 
 .recuadro-dos{
@@ -432,14 +457,14 @@ span{
     
 }
 .dos-uno{
-    width: 50%;
+    width: 35%;
     height: 100%;
     
     display: flex;
     flex-direction: column;
 }
 .dos-dos{
-    width: 50%;
+    width: 65%;
     height: 100%;
     background-image: linear-gradient(
         0deg,
@@ -453,11 +478,27 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    
+    transition: 0.5s;
     font-size: 55px;
     text-shadow: 0px 0px 15px black;
     
 }
+.dos-dos:hover{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0)
+    ),
+    url(https://media.istockphoto.com/photos/hand-holding-tarot-card-with-candlelight-on-the-darkness-background-picture-id1202954539?b=1&k=20&m=1202954539&s=170667a&w=0&h=Y2mCnRonkkwOsHpiBfaDF8vQLLFqFW3ppy1zLmOUaHM=);
+    width: 70%;
+    text-shadow: 0px 0px 15px #00ffb38f;
+    font-size: 70px;
+    cursor: pointer;
+
+    box-shadow: inset 0 0 15px 10px #00ffb38f;
+}
+
 
 .dos-uno-uno{
     height: 50%;
@@ -469,13 +510,28 @@ span{
     background-size: cover;
     background-repeat: no-repeat;
     background-position:center;
-
+    color: #faf1cb;;
     display: flex;
     align-items: center;
-    color: white;
+    
     padding-left: 50px;
     font-size: 35px;
     text-shadow: 0px 0px 15px black;
+    transition: 0.5s;
+}
+.dos-uno-uno:hover{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0)
+    ),
+    url(https://images3.alphacoders.com/729/729108.jpg);
+    height: 60%;
+    text-shadow: 0px 0px 15px #ffd0008f;
+    font-size: 40px;
+    cursor: pointer;
+
+    box-shadow: inset 0 0 15px 10px #ffd0008f;
 }
 
 .dos-uno-dos{
@@ -488,13 +544,29 @@ span{
     background-size: cover;
     background-repeat: no-repeat;
     background-position:center;
-
+    color: rgb(255, 231, 208);
     display: flex;
     align-items: center;
-    color: white;
     padding-left: 50px;
     font-size: 35px;
     text-shadow: 0px 0px 15px black;
+    transition: 0.5s;
+}
+
+.dos-uno-dos:hover{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0)
+    ),
+    url(https://media.istockphoto.com/photos/zodiac-signs-inside-of-horoscope-circle-astrology-in-the-sky-with-picture-id1315195611?b=1&k=20&m=1315195611&s=170667a&w=0&h=4gnJXXsf-dGRR86btcP2LMFTUVD65hpoYIpRXVicgBg=);
+    height: 60%;
+    
+    text-shadow: 0px 0px 15px #fdbffd8f;
+    font-size: 40px;
+    cursor: pointer;
+
+    box-shadow: inset 0 0 15px 10px #fc95eb8f;
 }
 
 .recuadro-tres{
@@ -511,10 +583,26 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    
     font-size: 55px;
     text-shadow: 0px 0px 15px black;
+    transition: 0.5s;
     
+}
+.recuadro-tres:hover{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0)
+    ),
+    url(https://thumbs.dreamstime.com/b/pancarta-m%C3%A1gica-para-el-dise%C3%B1o-de-astrolog%C3%ADa-tarot-boho-arte-del-universo-luna-creciente-y-sol-sobre-fondo-azul-esot%C3%A9rico-198798964.jpg);
+    width: 101%;
+    
+    text-shadow: 0px 0px 15px #fdbffd8f;
+    font-size: 60px;
+    cursor: pointer;
+
+    box-shadow: inset 0 0 15px 10px #fc95eb8f;
 }
 .flecha-atras{
     width: 100px;
@@ -558,7 +646,7 @@ span{
     flex-direction: row;
     
 }
-.parte-visible,.contenido-parte-visible{
+.parte-visible{
     height: 60vh;
     width: 60vw;
     background-color:#2d0031b7;
@@ -575,6 +663,29 @@ span{
     border: none;
     background-color: transparent;
     color: white;
+
+    height: 60vh;
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    
+    position: absolute;
+
+    opacity: 1;
+    transition: 1s;
+    animation: animacion 0.5s;
+}
+@keyframes animacion{
+    0%{
+        left:-10%;
+        opacity: 0;
+    }
+    100%{
+        left:-1%;
+        opacity: 1;
+    }
 }
 .img-carta-grande{
     width: 20vw;
@@ -584,6 +695,7 @@ span{
     padding: 10px;
     background-color: rgb(255, 255, 255);
     margin-right: 5%;
+    
 }
 
 .carta-descripcion{
@@ -670,4 +782,16 @@ span{
 .derechita:hover{
     color: #2d0031;
     cursor: pointer;
+}
+
+.img-carga{
+    width: 200px;
+    height: 200px;
+    filter: hue-rotate(120deg) brightness(100%);
+}
+.div-carga{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
