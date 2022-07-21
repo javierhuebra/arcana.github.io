@@ -70,8 +70,20 @@ document.querySelector(".flecha-atras").addEventListener("click",()=>{
     document.querySelector(".cuadro").style.display="block";
     document.querySelector(".flecha-atras").style.display="none";
     contenedor.style.display="none";
+    document.querySelector(".consejo-arcano").style.display="none";
+    document.querySelector(".consejo-arbolito").classList.remove("consejo-arbolito1");
+
+    document.querySelector(".consejo-informativa").style.display="flex";
+    document.querySelector(".consejo-formulario").style.display="flex";
+
+    document.querySelector(".workspace-consejo").style.display="none";
 });
 
+document.querySelector(".uno-dos").addEventListener("click",()=>{
+    document.querySelector(".cuadro").style.display="none";
+    document.querySelector(".flecha-atras").style.display="flex";
+    document.querySelector(".consejo-arcano").style.display="flex";
+});
 document.querySelector(".equis").addEventListener("click",()=>{
     document.querySelector(".pantalla-negra").style.display="none";
 });

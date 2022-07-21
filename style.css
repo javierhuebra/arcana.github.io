@@ -90,7 +90,7 @@ body{
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 0px 7vw;
-   
+    
 }
 .main{
     opacity: 0;
@@ -98,6 +98,7 @@ body{
 }
 .contenedor-cartas{
 margin: 0;
+animation: animacion 1s;
 }
 .footer{
     background-color: #310336;
@@ -350,9 +351,9 @@ span{
     height: 79vh;
     width: 100vw;
     color:#fad4fd;
-    
+    animation: animacion 0.5s;
     font-family: 'Shadows Into Light', cursive;
-    
+  
     
     
 }
@@ -686,6 +687,32 @@ span{
         left:-1%;
         opacity: 1;
     }
+
+}
+@keyframes sombra{
+    0%{
+        filter: drop-shadow(0px 0px 0px transparent);
+    }
+    50%{
+        filter: drop-shadow(0px 0px 15px #00fa9a79);
+    }
+    60%{
+        filter: drop-shadow(0px 0px 20px #00fa9a7c);
+    }
+    100%{
+        filter: drop-shadow(0px 0px 0px transparent);
+    }
+
+}
+
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        
+    }
 }
 .img-carta-grande{
     width: 20vw;
@@ -794,4 +821,152 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.consejo-arcano{
+    margin: 1vh 0;
+    height: 79vh;
+    width: 100vw;
+    color:#fad4fd;
+    
+    font-family: 'Shadows Into Light', cursive;
+    
+    display: none;
+
+    animation: animacion 1.5s;
+    justify-content: center;
+}
+.contenedor-consejo{
+    height: 100%;
+    width: 50%;
+    
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.1)
+    ), url(images/papiro.png);
+    background-position: center;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.consejo-informativa{
+    height: 30%;
+    width: 80%;
+    
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
+    ), url(images/arcanos.jpg);
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    
+    
+    text-align: center;
+    box-shadow: 0px 0px 15px #000000;
+    font-size: 25px;
+    text-shadow: 0px 0px 15px black;
+
+}
+.consejo-formulario form{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.consejo-formulario input{
+    display: block; 
+    margin-bottom: 10px;
+}
+.consejo-formulario input:focus{
+    outline: none;
+    
+}
+
+.consejo-formulario{
+    height: 30%;
+    width: 40%;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url(images/arcanos-back.jpg);
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 15px #000000;
+    border-radius: 15px;
+    
+}
+.consejo-arbolito{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 40%;
+    
+    
+    animation: sombra 2s infinite;
+    transition: 1s;
+}
+.consejo-arbolito1{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0%;
+    background-color: #310336;
+    box-shadow: 0px 0px 5px #00fa9a;
+    border-radius: 50%;
+    padding: 3px;
+    
+    
+    
+    animation: sombra 1s infinite;
+    transition: 1s;
+}
+.se-hacen-presentes{
+    
+    color: #00fa9a;
+    text-shadow: 0px 0px 10px #00fa9a;
+}
+
+.nombre-input,.apellido-input,.fecha-input{
+    width: 80%;
+    height: 15%;
+    background-color: #002207;
+    border-radius: none;
+    border: 3px solid white;
+    color: white;
+    font-weight: 600;
+    
+}
+
+.enviar-input{
+    height: 15%;
+    padding: 5px 15px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+.workspace-consejo{
+    width: 85%;
+    height: 85%;
+    
+    display: none;
+    border: 3px solid red;
+
+    animation: aparecer 1s;
 }
