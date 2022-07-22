@@ -1,0 +1,266 @@
+.consejo-arcano{
+    margin: 1vh 0;
+    height: 79vh;
+    width: 100vw;
+    color:#fad4fd;
+    
+    font-family: 'Shadows Into Light', cursive;
+    
+    display: none;
+
+    animation: animacion 1.5s;
+    justify-content: center;
+}
+.contenedor-consejo{
+    height: 100%;
+    width: 50%;
+    
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.1)
+    ), url(images/papiro.png);
+    background-position: center;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    transition: 1s;
+}
+
+.consejo-informativa{
+    height: 30%;
+    width: 80%;
+    
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
+    ), url(images/arcanos.jpg);
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    
+    
+    text-align: center;
+    box-shadow: 0px 0px 15px #000000;
+    font-size: 25px;
+    text-shadow: 0px 0px 15px black;
+
+}
+.consejo-formulario form{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.consejo-formulario input{
+    display: block; 
+    margin-bottom: 10px;
+}
+.consejo-formulario input:focus{
+    outline: none;
+    
+}
+
+.consejo-formulario{
+    height: 30%;
+    width: 40%;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url(images/arcanos-back.jpg);
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 15px #000000;
+    border-radius: 15px;
+    
+}
+.consejo-arbolito{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 40%;
+    
+    
+    animation: sombra 2s infinite;
+    transition: 1s;
+}
+.consejo-arbolito1{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0%;
+    background-color: #310336;
+    box-shadow: 0px 0px 5px #00fa9a;
+    border-radius: 50%;
+    padding: 3px;
+    
+    
+    
+    animation: sombra 1s infinite;
+    transition: 1s;
+}
+.se-hacen-presentes{
+    
+    color: #00fa9a;
+    text-shadow: 0px 0px 10px #00fa9a;
+}
+
+.nombre-input,.apellido-input,.fecha-input{
+    width: 80%;
+    height: 15%;
+    background-color: #002207;
+    border-radius: none;
+    border: 3px solid white;
+    color: white;
+    font-weight: 600;
+    
+}
+
+.enviar-input{
+    height: 15%;
+    padding: 5px 15px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+.workspace-consejo{
+    width: 85%;
+    height: 85%;
+    
+    
+    /* border: 3px solid red; */
+
+    animation: aparecer 1s;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cubo{
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    position: relative;
+
+    transform-style: preserve-3d;
+    transform-origin: 125px 125px 125px;
+    animation: girar 5s infinite;
+}
+
+.cara1,.cara2,.cara3,.cara4,.cara5,.cara6{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cara1{
+    background-image: url(./images/back-cubo.png);
+    background-size: 100% 100%;
+    transform: translateZ(250px);
+    
+    
+}
+.cara2{
+    background-image: url(./images/back-cubo.png);
+    background-size: 100% 100%;
+
+    background-color: #7e8604;
+    transform: rotateY(90deg) translateZ(125px) translateX(-125px) ;
+    
+}
+.cara3{
+    background-image: url(./images/back-cubo.png);
+    background-size: 100% 100%;
+
+    background-color: #f200fa;
+    transform: rotateY(90deg) translateZ(-125px) translateX(-125px) ;
+}
+.cara4{
+    background-image: url(./images/back-cubo.png);
+    background-size: 100% 100%;
+
+    background-color: #c4fa00;
+    transform: rotateX(90deg) translateZ(125px) translateY(125px) ;
+}
+.cara5{
+    background-image: url(./images/back-cubo.png);
+    background-size: 100% 100%;
+
+    background-color: #2500fa;
+    transform: rotateX(90deg) translateZ(-125px) translateY(125px) ;
+}
+.cara6{
+    background-image: url(./images/back-cubo.png);
+    background-size: 100% 100%;
+    
+    background-color: #4dccf3;
+}
+
+@keyframes girar{
+    
+    100%{
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+    
+}
+
+.cartas-cubo{
+    width: 100px;
+    height: 160px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: 4s;
+}
+.cartas-mesa{
+    width: 100%;
+    height: 50%;
+    
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    
+    
+}
+
+.imagen-cartas-consejo{
+    border-radius: 10px;
+    height: 70%;
+    width: 150px;
+    position: absolute;
+    transition: 0.2s;
+    bottom: 0%;
+    opacity: 1;
+}
+.imagen-cartas-consejo:hover{
+    bottom: 10%;
+    box-shadow: 0px 0px 20px rgb(255, 0, 242);
+    border: 3px solid rgb(255, 0, 242);
+    cursor: pointer;
+}
+
+.titulo-cant-cartas{
+    position: absolute;
+    bottom: 75%;
+    right: 0%;
+}

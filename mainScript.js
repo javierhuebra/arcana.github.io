@@ -77,6 +77,8 @@ document.querySelector(".flecha-atras").addEventListener("click",()=>{
     document.querySelector(".consejo-formulario").style.display="flex";
 
     document.querySelector(".workspace-consejo").style.display="none";
+
+   
 });
 
 document.querySelector(".uno-dos").addEventListener("click",()=>{
