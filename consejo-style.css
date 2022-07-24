@@ -151,7 +151,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    opacity: 1;
+
+    transition: 2s;
 }
+
 
 .cubo{
     width: 250px;
@@ -162,6 +166,9 @@
     transform-style: preserve-3d;
     transform-origin: 125px 125px 125px;
     animation: girar 5s infinite;
+    animation-direction: alternate;
+    
+    
 }
 
 .cara1,.cara2,.cara3,.cara4,.cara5,.cara6{
@@ -177,14 +184,14 @@
     background-image: url(./images/back-cubo.png);
     background-size: 100% 100%;
     transform: translateZ(250px);
-    
+   
     
 }
 .cara2{
     background-image: url(./images/back-cubo.png);
     background-size: 100% 100%;
 
-    background-color: #7e8604;
+    
     transform: rotateY(90deg) translateZ(125px) translateX(-125px) ;
     
 }
@@ -192,28 +199,28 @@
     background-image: url(./images/back-cubo.png);
     background-size: 100% 100%;
 
-    background-color: #f200fa;
+    
     transform: rotateY(90deg) translateZ(-125px) translateX(-125px) ;
 }
 .cara4{
     background-image: url(./images/back-cubo.png);
     background-size: 100% 100%;
 
-    background-color: #c4fa00;
+    
     transform: rotateX(90deg) translateZ(125px) translateY(125px) ;
 }
 .cara5{
     background-image: url(./images/back-cubo.png);
     background-size: 100% 100%;
 
-    background-color: #2500fa;
+    
     transform: rotateX(90deg) translateZ(-125px) translateY(125px) ;
 }
 .cara6{
     background-image: url(./images/back-cubo.png);
     background-size: 100% 100%;
     
-    background-color: #4dccf3;
+    
 }
 
 @keyframes girar{
@@ -224,12 +231,44 @@
     
 }
 
+
+@keyframes desaparecer{
+  
+    100%{
+        opacity: 0;
+    }
+    
+}
+
+@keyframes brillar{
+    0%{
+        box-shadow: 0px 0px 20px transparent;
+        
+    }
+    50%{
+        box-shadow: 0px 0px 20px rgb(0, 0, 0);
+        
+    }
+    100%{
+        box-shadow: 0px 0px 20px transparent;
+        
+    }
+    
+}
+
+
 .cartas-cubo{
     width: 100px;
     height: 160px;
     border-radius: 10px;
     opacity: 0;
     transition: 4s;
+}
+
+.cartas-cubo-animate{
+    animation: 3s desaparecer;
+    
+    
 }
 .cartas-mesa{
     width: 100%;
@@ -239,9 +278,15 @@
     flex-direction: row;
     position: relative;
     align-items: center;
-    
-    
+
+    opacity: 1;
 }
+.cartas-mesa-2{
+    
+    animation: desaparecer 2s;
+}
+
+
 
 .imagen-cartas-consejo{
     border-radius: 10px;
